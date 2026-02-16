@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenangan Kelas 6C SDN Lagoa 01 Pagi (2020-2026)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f7f0;
+            color: #333;
+            line-height: 1.6;
+            background-image: linear-gradient(to bottom, #f9f7f0, #e8f4f8);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #4a90e2 0%, #63b3ed 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ffd166;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .periode {
+            background-color: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto 60px;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4a90e2;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .timeline-content h3 {
+            color: #4a90e2;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .timeline-content p {
+            color: #666;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            background-color: white;
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background-color: #4a90e2;
+            top: 18px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        /* Cards Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            color: #2c3e50;
+            font-size: 2.2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: #4a90e2;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-image {
+            height: 200px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .card-text {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .card-bottom {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        
+        .card-bottom strong {
+            color: #2c3e50;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-icon {
+            font-size: 2.5rem;
+            color: #4a90e2;
+            margin-bottom: 15px;
+        }
+        
+        .team-role {
+            color: #4a90e2;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .team-name {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .team-members {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* Success Section */
+        .success-card {
+            background: linear-gradient(135deg, #4a90e2 0%, #63b3ed 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 60px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+        }
+        
+        .success-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .success-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 2.5rem;
+            color: #ffd166;
+            margin-bottom: 15px;
+        }
+        
+        .footer-text {
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item::after {
+                left: 18px !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                display: none;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-school"></i>
+            </div>
+            <h1>Kelas 6C SDN Lagoa 01 Pagi</h1>
+            <p class="subtitle">Kenangan Indah Bersama dari Tahun 2020 sampai 2026</p>
+            <div class="periode">2020 - 2026</div>
+        </header>
+
+        <!-- Timeline Section -->
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2021: Awal Pertemuan</h3>
+                    <p>Kami pertama kali bertemu di kelas 1C SDN Lagoa 01 Pagi. Semuanya masih malu-malu dan belum saling mengenal.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2022: Mulai Akrab</h3>
+                    <p>Di tahun kedua, kami mulai lebih akrab. Banyak cerita lucu dan candaan mulai tercipta di antara kami.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2023: berduka </h3>
+                    <p>Di kelas 3, kami berduka karena telah meninggal nya almarhum ibu yeti </p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2024: Makan Bareng Pertama Kali</h3>
+                    <p>kelas 4, kami pernah kena kasus bersama karena membuat keributan di sekolah. Tapi justru itu yang membuat kami semakin kompak.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2024: Pertumbuhan Bersama</h3>
+                    <p>Kami mulai lebih serius belajar tapi tetap tidak lupa untuk bercanda dan bermain bersama saat istirahat.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2025: Persiapan Kelas 6</h3>
+                    <p>Memasuki kelas 6, kami mulai sadar bahwa waktu bersama semakin sedikit. Semakin erat dan saling mendukung.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>2026: Kelulusan</h3>
+                    <p>Tahun kelulusan kami. Sedih untuk berpisah, tapi bahagia telah melewati 6 tahun indah bersama.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memories Cards -->
+        <h2 class="section-title">Kenangan Spesial</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Bercanda Bareng</h3>
+                    <p class="card-text">Setiap hari selalu ada candaan yang mengocok perut. Dari lelucon sederhana sampai kejadian lucu yang tidak terlupakan.</p>
+                </div>
+                <div class="card-bottom">
+                    <strong>Lokasi:</strong> Kelas 6C, SDN Lagoa 01 Pagi<br>
+                    <strong>Waktu:</strong> Setiap hari istirahat
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Kena Kasus Bareng</h3>
+                    <p class="card-text">Ingat ketika kami semua dihukum berdiri di depan kelas karena ramai saat pelajaran? Kami justru tertawa geli melihat wajah masing-masing.</p>
+                </div>
+                <div class="card-bottom">
+                    <strong>Kasus paling terkenal:</strong> Ribut di perpustakaan<br>
+                    <strong>Hukuman:</strong> Menyapu halaman sekolah bersama
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(to bottom right, #ffecd2, #fcb69f);"></div>
+                <div class="card-content">
+                    <h3 class="card-title">Makan Bareng</h3>
+                    <p class="card-text">Setiap sekolah kami makan MBG</p>
+                </div>
+                <div class="card-bottom">
+                    <strong>Menu favorit:</strong> Es teh, creps, cireng isi ayam, mie goreng dan mie kuah<br>
+                    <strong>Tempat favorit:</strong> tangga lantai 4 dan kelas
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Structure -->
+        <h2 class="section-title">Struktur Kelas 6C</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="team-role">Wali Kelas</div>
+                <div class="team-name">Ibu Astika</div>
+                <p class="team-members">Pembimbing dan orang tua kami di sekolah yang selalu sabar membimbing kami selama 6 tahun.</p>
+            </div>
+            
+            <div class="team-card">
+                <div class="team-icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="team-role">Ketua & Wakil Kelas</div>
+                <div class="team-name">Azzam & Mandala</div>
+                <p class="team-members">Pemimpin kelas yang bertanggung jawab dan selalu mengayomi teman-teman.</p>
+            </div>
+            
+            <div class="team-card">
+                <div class="team-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div class="team-role">Sekretaris</div>
+                <div class="team-name">Qiara</div>
+                <p class="team-members">Penata administrasi kelas yang rapi dan selalu mencatat semua kegiatan kelas.</p>
+            </div>
+            
+            <div class="team-card">
+                <div class="team-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="team-role">Tim Keamanan</div>
+                <div class="team-name">Sigit, Afrans, Anggung, Kesya</div>
+                <p class="team-members">Penjaga ketertiban dan keamanan kelas yang selalu sigap saat ada masalah.</p>
+            </div>
+        </div>
+
+        <!-- Success Section -->
+        <div class="success-card">
+            <h3 class="success-title">Keberhasilan Kami</h3>
+            <p class="success-text">Atas bimbingan Ibu Astika dan kerja sama seluruh anggota kelas, kami berhasil meraih banyak prestasi. Salah satu kebanggaan terbesar kami adalah Fathia yang selalu menjadi peringkat 1 paralel dan membawa nama baik kelas 6C. Tidak hanya prestasi akademik, kami juga berhasil menjuarai lomba kebersihan kelas dan lomba paduan suara tingkat sekolah.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-logo">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3>Kelas 6C - SDN Lagoa 01 Pagi</h3>
+            <p class="footer-text">Kenangan indah tahun 2020-2026 akan selalu kami simpan dalam hati</p>
+            <p class="footer-text">"Bersama-sama kita melewati suka dan duka, tertawa dan menangis, belajar dan bermain."</p>
+            <p class="footer-text">© 2026 - Kelas 6C Selamanya</p>
+            <div calss="card">
+                
+        </footer>
+    </div>
+
+    <script>
+        // Animasi sederhana untuk timeline saat di-scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+            
+            // Tambahkan efek hover pada kartu
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
